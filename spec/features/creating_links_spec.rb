@@ -1,14 +1,6 @@
 require 'tilt/erb'
-require 'database_cleaner'
-
 
 feature 'creating links' do
-  
-  before do 
-    DatabaseCleaner.strategy = :truncation
-    DatabaseCleaner.clean
-  end
-
   scenario 'should have a form to submit a link' do
     visit '/links/new'
     expect(page).to have_field('title')
