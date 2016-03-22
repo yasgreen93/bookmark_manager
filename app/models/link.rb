@@ -1,6 +1,3 @@
-
-
-
 class Link
 
   include DataMapper::Resource
