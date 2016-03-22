@@ -8,12 +8,6 @@ I want to see a list of links to useful websites
 
 ```
 As an Internet user
-So that I can easily find the links I want
-I want to sort my list of links in descending chronological order
-```
-
-```
-As an Internet user
 So that I can update my list of useful websites
 I want to be able to add new links with their titles to the database
 ```
