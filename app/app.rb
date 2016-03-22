@@ -4,6 +4,10 @@ require_relative './models/link.rb'
 require 'sinatra/base'
 
 class Bookmark < Sinatra::Base
+  get '/' do
+    redirect('/links')
+  end
+
   get '/links' do
     @links = Link.all
     erb(:'/links/index')
