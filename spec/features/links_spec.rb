@@ -1,5 +1,5 @@
 
-feature '/' do
+feature '/links/index' do
   scenario 'when visitor visits homepage they see links' do
     Link.create(url: 'http://www.makersacademy.com', title: 'Makers Academy')
 
