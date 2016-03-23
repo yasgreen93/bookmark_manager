@@ -6,6 +6,7 @@ require File.join(File.dirname(__FILE__), '..', 'app/app.rb')
 
 require './app/models/link.rb'
 require './app/app'
+require './spec/features/web_helper'
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
