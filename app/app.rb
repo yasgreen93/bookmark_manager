@@ -6,7 +6,13 @@ require_relative 'data_mapper_setup'
 
 class Bookmark < Sinatra::Base
   get '/' do
-    redirect('/links')
+    erb(:home)
+  end
+
+  post '/' do
+    @user = User.create(address: params[:email], password: params[:pw])
+    p @user
+    redirect '/links'
   end
 
   get '/links' do

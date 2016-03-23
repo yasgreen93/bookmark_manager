@@ -21,3 +21,10 @@ def add_ruby
   fill_in 'tag', with: 'ruby programming'
   click_button 'Submit'
 end
+
+def sign_up
+  visit '/'
+  fill_in 'email address', with: 'whatever@gmail.com'
+  fill_in 'password', with: '1234567'
+  click_button 'Sign up'
+end
