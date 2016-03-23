@@ -11,7 +11,6 @@ feature "View links" do
     within "ul#links" do
       expect(page).to have_content("View links")
     end
-
     # Link.all.destroy
 
   end
