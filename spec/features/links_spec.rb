@@ -10,4 +10,10 @@ feature '/links/index' do
       expect(page).to have_content('BBC')
     end
   end
+
+  scenario 'should be able to jump to add link page' do
+    visit('/links')
+    click_button('Add link')
+    expect(page).to have_content('Submit a new link:')
+  end
 end

@@ -1,5 +1,9 @@
 <h1> Links </h1>
 
+<form action='/links/new'>
+  <input type='submit' value='Add link'>
+</form>
+
 <h3>Filter by tags <%= @tags %></h3>
 <form action='/tags' method='post'>
   <input type='text' name='tags' placeholder="tags">
