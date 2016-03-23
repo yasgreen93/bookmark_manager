@@ -11,6 +11,17 @@ class BookmarkManager < Sinatra::Base
     erb(:links)
   end
 
+  get '/add_link' do
+    erb(:add_link)
+  end
+
+  post '/add_link' do
+    title = params[:title]
+    url   = params[:url]
+    Link.create(title: title, url: url)
+    redirect(:links)
+  end
+
   # start the server if ruby file executed directly
   run! if app_file == $0
 end

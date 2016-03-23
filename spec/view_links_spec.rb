@@ -2,7 +2,7 @@ require './app/models/link'
 
 feature "View links" do
   scenario "see a list of links on the links page" do
-    Link.create(url: "http://www.makersacademy.com/", title: "Makers Academy")
+    # Link.create(url: "http://www.makersacademy.com/", title: "Makers Academy")
 
     visit "/links"
 
