@@ -1,4 +1,4 @@
-
+require 'tilt/erb'
 feature '/links/index' do
   scenario 'when visitor visits homepage they see links' do
     add_bbc
