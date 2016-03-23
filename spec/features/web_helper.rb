@@ -13,3 +13,11 @@ def add_zombo
   fill_in 'tag', with: 'kid'
   click_button 'Submit'
 end
+
+def add_ruby
+  visit '/links/new'
+  fill_in 'url', with: 'http://www.ruby-doc.org/'
+  fill_in 'title', with: 'ruby docs'
+  fill_in 'tag', with: 'ruby programming'
+  click_button 'Submit'
+end

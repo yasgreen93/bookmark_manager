@@ -15,7 +15,11 @@
     <li>
       Title:  <%= link.title %>
       URL:    <%= link.url %>
-      Tag:    <%= link.tags.first.name %>
+      Tag:    <%= @string = ""
+                  (link.tags).each do |tag|
+                  @string << tag.name + ", "
+                  end
+                  @string %>
     </li>
   <% end %>
 </ul>
