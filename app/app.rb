@@ -26,6 +26,12 @@ class Bookmark < Sinatra::Base
     redirect ('/links')
   end
 
+  post '/tags' do
+    @tags = params[:tags] ||= ''
+    @links = Link.all.select { |link| link.tags.first.name == @tags }
+    erb(:'/links/index')
+  end
+
   # start the server if ruby file executed directly
   run! if app_file == $0
 end
