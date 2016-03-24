@@ -23,8 +23,8 @@ def add_ruby
 end
 
 def sign_up
-  visit '/'
-  fill_in 'email address', with: 'whatever@gmail.com'
-  fill_in 'password', with: '1234567'
+  visit '/users/sign_up'
+  fill_in :email, with: 'whatever@gmail.com'
+  fill_in :pw, with: '1234567'
   click_button 'Sign up'
 end
