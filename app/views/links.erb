@@ -1,12 +1,13 @@
 <h1> Links... </h1>
 
 <ul id="links">
-  <li>
-    <% @links.each do |link| %>
-    Title: <%= link.title %>
-    URL:   <%= link.url %>
-    Tags:   <%= link.tags %>
-  <li>
+
+  <% @links.each do |link| %>
+    <li>
+      Title: <%= link.title %>
+      URL:   <%= link.url %>
+      Tags:  <%= link.tags.first.tag_name %>
+    </li>
   <% end %>
 </ul>
 
