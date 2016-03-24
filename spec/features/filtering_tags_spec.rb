@@ -9,5 +9,3 @@ feature 'filtering_tags_spec' do
   end
 
 end
-
-# [#<Tag @id=3 @tag_name="sports">, #<Tag @id=4 @tag_name="pigeons">, ]
