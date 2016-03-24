@@ -13,3 +13,11 @@ def add_pigeons
   fill_in :tags, with: 'pigeons'
   click_button 'Add link'
 end
+
+def add_many_tags
+  visit '/add_link'
+  fill_in :title, with: 'Birdspotting'
+  fill_in :url, with: 'www.spotbirds4fun.com'
+  fill_in :tags, with: 'animals birds pigeons'
+  click_button 'Add link'
+end
