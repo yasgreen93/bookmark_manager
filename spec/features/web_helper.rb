@@ -31,3 +31,10 @@ def sign_up(email: 'whatever@gmail.com',
   fill_in :pw_conf, with: password_confirmation
   click_button 'Sign up'
 end
+
+def sign_in(address:, password:)
+  visit '/sessions/new'
+  fill_in :address, with: address
+  fill_in :password, with: password
+  click_button 'Sign in'
+end
