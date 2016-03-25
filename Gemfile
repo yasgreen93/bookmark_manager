@@ -12,4 +12,4 @@ gem 'dm-postgres-adapter'
 gem 'database_cleaner'
 gem 'rake'
 gem 'bcrypt'
-# gem "rails"
+gem 'dm-validations'

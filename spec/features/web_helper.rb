@@ -22,9 +22,12 @@ def add_ruby
   click_button 'Submit'
 end
 
-def sign_up
+def sign_up(email: 'whatever@gmail.com',
+            password: '12345',
+            password_confirmation: '12345')
   visit '/users/sign_up'
-  fill_in :email, with: 'whatever@gmail.com'
-  fill_in :pw, with: '1234567'
+  fill_in :email, with: email
+  fill_in :pw, with: password
+  fill_in :pw_conf, with: password_confirmation
   click_button 'Sign up'
 end

@@ -5,4 +5,8 @@ feature 'User signup' do
     expect(page).to have_content('Welcome! whatever@gmail.com')
     expect(User.first.address).to eq('whatever@gmail.com')
   end
+
+  scenario 'No user is created when passwords do not match' do
+    expect{ sign_up(password_confirmation: 'wrong') }.not_to change(User, :count)
+  end
 end
