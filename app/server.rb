@@ -1,3 +1,4 @@
+
 class Bookmark < Sinatra::Base
 
   enable :sessions

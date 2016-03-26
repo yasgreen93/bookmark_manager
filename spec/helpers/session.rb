@@ -1,5 +1,5 @@
 module SessionHelpers
-  
+
   def sign_in(address:, password:)
     visit '/sessions/new'
     fill_in :address, with: address

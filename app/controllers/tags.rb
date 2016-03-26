@@ -1,3 +1,5 @@
+require_relative '../server'
+
 class Bookmark < Sinatra::Base
 
   post '/tags' do
@@ -5,5 +7,5 @@ class Bookmark < Sinatra::Base
     @links = Link.all.select { |link| link.tags.first.name == @tags }
     erb(:'/links/index')
   end
-  
+
 end
