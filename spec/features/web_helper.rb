@@ -1,5 +1,5 @@
 def add_bbc
-  visit '/links/new'
+  click_button 'Add link'
   fill_in 'url', with: 'http://www.bbc.co.uk'
   fill_in 'title', with: 'BBC'
   fill_in 'tag', with: 'news'
@@ -7,7 +7,7 @@ def add_bbc
 end
 
 def add_zombo
-  visit '/links/new'
+  click_button 'Add link'
   fill_in 'url', with: 'http://www.zombo.com/'
   fill_in 'title', with: 'This is Zombocom'
   fill_in 'tag', with: 'kid'
@@ -15,7 +15,7 @@ def add_zombo
 end
 
 def add_ruby
-  visit '/links/new'
+  click_button 'Add link'
   fill_in 'url', with: 'http://www.ruby-doc.org/'
   fill_in 'title', with: 'ruby docs'
   fill_in 'tag', with: 'ruby programming'

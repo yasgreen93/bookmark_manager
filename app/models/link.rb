@@ -9,4 +9,5 @@ class Link
   property :url, String
 
   has n, :tags, :through => Resource
+  belongs_to :user
 end

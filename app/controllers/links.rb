@@ -1,13 +1,15 @@
 
 class Bookmark < Sinatra::Base
-  
+
   get '/links' do
-    @links = Link.all
+    user = User.get(session[:user_id])
+    @links = Link.all(user_id: user.id) || []
     erb(:'/links/index')
   end
 
   get '/links/new' do
-     erb(:'/links/new')
+    user = User.get(session[:user_id])
+    erb(:'/links/new')
   end
 
   post '/links' do
