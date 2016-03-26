@@ -2,13 +2,11 @@ ENV["RACK_ENV"] ||= "development"
 
 require 'sinatra/base'
 require 'sinatra/flash'
+require 'sinatra/partial'
 require_relative 'data_mapper_setup'
+require_relative 'server'
 
 class Bookmark < Sinatra::Base
-  enable :sessions
-  set :session_secret, 'super secret'
-  register Sinatra::Flash
-  use Rack::MethodOverride
 
   get '/' do
     erb(:home)
@@ -75,12 +73,6 @@ class Bookmark < Sinatra::Base
     session[:user_id] = nil
     flash.keep[:notice] = 'goodbye!'
     redirect to '/links'
-  end
-
-  helpers do
-    def current_user
-      @current_user ||= User.get(session[:user_id])
-    end
   end
 
   # start the server if ruby file executed directly
