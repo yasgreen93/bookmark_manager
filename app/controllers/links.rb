@@ -1,9 +1,5 @@
 class Bookmark < Sinatra::Base
 
-  get '/' do
-    erb(:home)
-  end
-
   get '/links' do
     @links = Link.all
     erb(:'/links/index')
